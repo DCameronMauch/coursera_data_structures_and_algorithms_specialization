@@ -10,11 +10,11 @@ const rl = readline.createInterface({
 
 const handler = (line) => {
   const index = parseInt(line, 10);
-  console.log(fib(index));
+  console.log(fib_last_digit(index));
   rl.close();
 };
 
-const fib = (x, y = 0, z = 1) => {
+const fib_last_digit = (x, y = 0, z = 1) => {
   while (x > 0) {
     [x, y, z] = [x - 1, z, (y + z) % 10]
   }
