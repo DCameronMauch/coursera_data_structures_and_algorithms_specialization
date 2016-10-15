@@ -16,13 +16,10 @@ results = items.map do |item|
 
     case data[index] <=> item
       when 1
-        # p [low, index, high, 1]
         high = index - 1
       when -1
-        # p [low, index, high, -1]
         low = index + 1
       when 0
-        # p [low, index, high, 0]
         found = true
     end
 
