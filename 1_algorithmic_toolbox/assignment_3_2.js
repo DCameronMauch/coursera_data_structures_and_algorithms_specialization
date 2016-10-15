@@ -20,8 +20,8 @@ const getItem = (c, s, l = []) => {
     if (c > 1) {
       rl.question('', getItem(c - 1, s, l));
     } else {
-      const x = l.sort(([v1, w1], [v2, w2]) => (v1 / w1) - (v2 / w2));
-      console.log(calculate(s, x));
+      l.sort(([v1, w1], [v2, w2]) => (v1 / w1) - (v2 / w2));
+      console.log(calculate(s, l));
       rl.close();
     }
   }
